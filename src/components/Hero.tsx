@@ -2,11 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldAlert, Zap } from 'lucide-react';
+import ParticleNetwork from './ParticleNetwork';
 
 export default function Hero() {
   return (
     <section className="pt-40 pb-20 px-6 text-center relative overflow-hidden min-h-[90vh] flex flex-col justify-center">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00FF41] rounded-full mix-blend-screen filter blur-[250px] opacity-10 pointer-events-none"></div>
+      <ParticleNetwork />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00FF41] rounded-full mix-blend-screen filter blur-[250px] opacity-5 pointer-events-none"></div>
       
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
@@ -41,8 +43,8 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="flex gap-6 justify-center relative z-10"
       >
-        <button className="flex items-center gap-3 px-10 py-5 bg-[#00FF41] text-[#003907] font-['Space_Grotesk'] font-bold uppercase tracking-widest text-lg hover:shadow-[0_0_30px_rgba(0,255,65,0.5)] hover:scale-105 transition-all">
-          <Zap className="w-5 h-5" /> INITIALIZE SEQUENCE
+        <button className="flex items-center gap-3 px-10 py-5 bg-[#00FF41] text-[#003907] font-['Space_Grotesk'] font-bold uppercase tracking-widest text-lg transition-all glitch-hover continuous-pulse group">
+          <Zap className="w-5 h-5 group-hover:animate-pulse" /> <span className="relative z-10">INITIALIZE SEQUENCE</span>
         </button>
       </motion.div>
     </section>
