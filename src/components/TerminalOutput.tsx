@@ -110,11 +110,11 @@ export default function TerminalOutput() {
               <div
                 key={i}
                 className={`mb-1 ${
-                  line.includes('[INFO]') ? 'text-blue-400' :
-                  line.includes('[WARN]') ? 'text-yellow-400' :
-                  line.includes('[SUCCESS]') || line.includes('[OK]') ? 'text-[#00FF41]' :
-                  line.includes('cargo') || line.includes('Finished') ? 'text-gray-300' :
-                  line.includes('Compiling') || line.includes('Running') ? 'text-green-600' :
+                  line?.includes('[INFO]') ? 'text-blue-400' :
+                  line?.includes('[WARN]') ? 'text-yellow-400' :
+                  line?.includes('[SUCCESS]') || line?.includes('[OK]') ? 'text-[#00FF41]' :
+                  line?.includes('cargo') || line?.includes('Finished') ? 'text-gray-300' :
+                  line?.includes('Compiling') || line?.includes('Running') ? 'text-green-600' :
                   'text-gray-400'
                 }`}
               >
