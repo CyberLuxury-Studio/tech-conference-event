@@ -1,13 +1,15 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import ConnectedNodes from '@/components/ConnectedNodes';
-import TransmissionRoster from '@/components/TransmissionRoster';
-import TerminalOutput from '@/components/TerminalOutput';
-import SystemDiagnostics from '@/components/SystemDiagnostics';
-import Pricing from '@/components/Pricing';
-import Footer from '@/components/Footer';
+
+const ConnectedNodes = dynamic(() => import('@/components/ConnectedNodes'));
+const TransmissionRoster = dynamic(() => import('@/components/TransmissionRoster'));
+const TerminalOutput = dynamic(() => import('@/components/TerminalOutput'));
+const Features = dynamic(() => import('@/components/Features'));
+const Pricing = dynamic(() => import('@/components/Pricing'));
+const SystemDiagnostics = dynamic(() => import('@/components/SystemDiagnostics'));
+const Footer = dynamic(() => import('@/components/Footer'));
 
 export default function Home() {
   return (

@@ -1,8 +1,12 @@
 "use client";
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ShieldAlert, Zap } from 'lucide-react';
-import ParticleNetwork from './ParticleNetwork';
+
+const ParticleNetwork = dynamic(() => import('./ParticleNetwork'), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (
